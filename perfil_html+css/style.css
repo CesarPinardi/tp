@@ -1,0 +1,52 @@
+body {
+  background-color: rgb(192, 186, 186);
+  height: 100%;
+  font-family: sans-serif;
+  font-style: unset;
+  padding: 0px;
+  font-size: 40px;
+  text-indent: 250px;
+}
+
+#topo {
+  height: 300px;
+  width: 100%;
+  display: flex;
+}
+
+.background_img{
+  width: 100%;
+}
+
+.profile{
+   position: relative;
+   left: 00px;
+   top: -110px;
+}
+
+#apresentacao{
+  font-size: 30px;
+  position: relative;
+  top:-180px;
+}
+
+#texto1{
+  font-size: 15px;
+  font-style: italic;
+  font-family: Verdana;
+  text-align: left;
+}
+
+#texto2{
+  text-align: justify;
+  font-size: 15px;
+  font-style: unset;
+  font-family: roboto;
+  text-align: left;
+}
+
+footer {
+  background: #EDD382;
+  text-align: center;
+  font-size: 10px;
+}
