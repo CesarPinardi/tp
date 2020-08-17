@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type"text/css" href="style.css" />
+    <title>Cadastre seu curriculo.</title>
+  </head>
+  <body>
+    <form name="form1" autocomplete="off" action="salvar" method="POST">
+      <h1>Cadastre seu Currículo</h1>
+      <h2>1. Dados Pessoais</h2>
+
+      <table>
+        <tr>
+          <td class="label">Nome</td>
+          <td class="answer">
+            <input required class="long" type="text" placeholder="Digite seu nome" />
+          </td>
+        </tr>
+        <tr>
+          <td class="label">Data de Nascimento</td>
+          <td class="answer">
+            <input class="long" type="date" />
+          </td>
+        </tr>
+        <tr>
+          <td class="label">Estado Civil</td>
+          <td class="answer">
+            <input
+              class="long"
+              type="text"
+              list="estadoCivil"
+              placeholder="Selecione o Estado Civil"
+            />
+            <datalist id="estadoCivil">
+              <option value="Solteiro"> </option>
+              <option value="Casado"> </option>
+              <option value="Viuvo"> </option>
+              <option value="Divorciado"> </option>
+            </datalist>
+          </td>
+        </tr>
+        <tr>
+          <td class="label">Sexo</td>
+          <td class="answer">
+            <input type="radio" value="Masculino" /> Masculino
+            <input type="radio" value="Feminino" /> Feminino
+          </td>
+        </tr>
+      </table>
+
+      <h2>2. Objetivo</h2>
+
+      <table>
+        <tr>
+          <td class="label">Objetivo</td>
+          <td class="answer">
+            <textarea
+              required
+              name="Objetivo"
+              cols="62"
+              rows="5"
+            >
+            </textarea>
+          </td>
+        </tr>
+      </table>
+
+      <h2>3. Contato</h2>
+
+      <table>
+        <tr>
+          <td class="label">Endereço</td>
+          <td class="answer">
+            <input
+              class="long"
+              required
+              type="text"
+              placeholder="Digite seu endereço "
+            />
+          </td>
+        </tr>
+
+        <tr>
+          <td class="label">Cidade / Estado</td>
+          <td class="answer">
+            <input type="text" required placeholder="Digite sua cidade" />
+            /
+            <input type="text" required maxlength = "2" placeholder="Digite seu estado" />
+          </td>
+        </tr>
+        <tr>
+          <td class="label">CEP</td>
+          <td class="answer">
+            <input
+              required
+              class="long"
+              type="text"
+              placeholder="Digite seu CEP no formato 99999-999"
+              maxlength="9"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td class="label">Telefone</td>
+          <td class="answer">
+            <input
+              required
+              class="long"
+              type="tel"
+              placeholder="Digite seu telefone no formato (99) 9999-9999"
+            />
+          </td>
+        </tr>
+
+        <tr>
+          <td class="label">Email</td>
+          <td class="answer">
+            <input required class="long" type="email" placeholder="Digite seu e-mail" />
+          </td>
+        </tr>
+
+        <tr>
+          <td class="label">Rede Social</td>
+          <td class="answer">
+            http://facebook.com/
+            <input class="social" type="url" placeholder="Perfil Facebook" />
+            <br />
+            http://linkedin.com/
+            <input class="social" type="url" placeholder="Perfil Linkedin" />
+            <br />
+            <input class="social" type="url" placeholder="Perfil Skype" />
+          </td>
+        </tr>
+      </table>
+
+      <h2>4. Conhecimentos</h2>
+
+      <table>
+        <tr>
+          <td class="label">Linguagens de Programação</td>
+          <td class="answer">
+            <input type="checkbox" value="c" /> C/C++ <br />
+            <input type="checkbox" value="java" /> Java <br />
+            <input type="checkbox" value="vb" /> Visual Basic <br />
+            <input type="checkbox" value="net" /> .NET <br />
+            <input type="checkbox" value="php" /> PHP <br />
+            <input type="checkbox" value="python" /> Python <br />
+            <input type="checkbox" value="html" /> HTML <br />
+          </td>
+        </tr>
+        <tr>
+          <td class="label">Idiomas</td>
+          <td class="answer">
+            Inglês
+            <input type="text" list="ingles" placeholder="Nível" />
+            <datalist id="ingles">
+              <option value="Básico"> </option>
+              <option value="Intermediário"> </option>
+              <option value="Avançado"> </option>
+            </datalist>
+            | Espanhol
+            <input type="text" list="espanhol" placeholder="Nível" />
+            <datalist id="espanhol">
+              <option value="Básico"> </option>
+              <option value="Intermediário"> </option>
+              <option value="Avançado"> </option>
+            </datalist>
+          </td>
+        </tr>
+      </table>
+
+      <input type="reset" value="Limpar" />
+      |
+      <input type="submit" value="Enviar" />
+    </form>
+  </body>
+</html>

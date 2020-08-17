@@ -1,0 +1,36 @@
+h1{
+    color: darkblue;
+    font-family: sans-serif;
+}
+
+h2{
+    color: blue;
+}
+
+.label{
+    background-color:rgb(133, 175, 253);
+    color: blue;
+    width: 250px;
+}
+
+.answer{
+    background-color:rgb(201, 219, 235);
+    width: 500px;
+}
+
+.social{
+    width: 100px;
+}
+
+.long{
+    width: 450px;
+}
+
+.long2{
+    width: 450px;
+    height: 30px;
+}
+
+tr, th, td{
+    border:solid 1px;
+}
