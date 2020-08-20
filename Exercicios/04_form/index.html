@@ -15,7 +15,13 @@
         <tr>
           <td class="label">Nome</td>
           <td class="answer">
-            <input required class="long" type="text" placeholder="Digite seu nome" />
+            <input
+              required
+              class="longReq"
+              type="text"
+              placeholder="Digite seu nome"
+            />
+            
           </td>
         </tr>
         <tr>
@@ -56,12 +62,7 @@
         <tr>
           <td class="label">Objetivo</td>
           <td class="answer">
-            <textarea
-              required
-              name="Objetivo"
-              cols="62"
-              rows="5"
-            >
+            <textarea  class= "longReq" required name="Objetivo" cols="62" rows="5"> 
             </textarea>
           </td>
         </tr>
@@ -74,7 +75,7 @@
           <td class="label">Endereço</td>
           <td class="answer">
             <input
-              class="long"
+            class= "longReq"
               required
               type="text"
               placeholder="Digite seu endereço "
@@ -85,9 +86,19 @@
         <tr>
           <td class="label">Cidade / Estado</td>
           <td class="answer">
-            <input type="text" required placeholder="Digite sua cidade" />
+            <input 
+            class="smallReq"
+            type="text" 
+            required 
+            placeholder="Digite sua cidade" />
             /
-            <input type="text" required maxlength = "2" placeholder="Digite seu estado" />
+            <input
+              type="text"
+              class="smallReq"
+              required
+              maxlength="2"
+              placeholder="Digite seu estado"
+            />
           </td>
         </tr>
         <tr>
@@ -95,7 +106,7 @@
           <td class="answer">
             <input
               required
-              class="long"
+              class= "longReq"
               type="text"
               placeholder="Digite seu CEP no formato 99999-999"
               maxlength="9"
@@ -107,7 +118,7 @@
           <td class="answer">
             <input
               required
-              class="long"
+              class= "longReq"
               type="tel"
               placeholder="Digite seu telefone no formato (99) 9999-9999"
             />
@@ -117,19 +128,27 @@
         <tr>
           <td class="label">Email</td>
           <td class="answer">
-            <input required class="long" type="email" placeholder="Digite seu e-mail" />
+            <input
+              required
+              class= "longReq"
+              type="email"
+              placeholder="Digite seu e-mail"
+            />
           </td>
         </tr>
 
         <tr>
           <td class="label">Rede Social</td>
           <td class="answer">
+            <img src="face.png" />
             http://facebook.com/
             <input class="social" type="url" placeholder="Perfil Facebook" />
             <br />
+            <img src="linkedin.png" />
             http://linkedin.com/
             <input class="social" type="url" placeholder="Perfil Linkedin" />
             <br />
+            <img src="skype.png" />
             <input class="social" type="url" placeholder="Perfil Skype" />
           </td>
         </tr>
@@ -170,10 +189,10 @@
           </td>
         </tr>
       </table>
-
-      <input type="reset" value="Limpar" />
+      <br>
+      <input type="reset" class="button" value="Limpar" />
       |
-      <input type="submit" value="Enviar" />
+      <input type="submit" class="button" value="Enviar" />
     </form>
   </body>
 </html>
