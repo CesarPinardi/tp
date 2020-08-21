@@ -17,7 +17,7 @@
           <td class="answer">
             <input
               required
-              class="longReq"
+              class="long"
               type="text"
               placeholder="Digite seu nome"
             />
@@ -62,7 +62,7 @@
         <tr>
           <td class="label">Objetivo</td>
           <td class="answer">
-            <textarea  class= "longReq" name="Objetivo" cols="62" rows="5"  required> 
+            <textarea  name="Objetivo" cols="62" rows="5"  required> 
             </textarea>
           </td>
         </tr>
@@ -75,7 +75,7 @@
           <td class="label">Endereço</td>
           <td class="answer">
             <input
-            class= "longReq"
+            class= "long"
               required
               type="text"
               placeholder="Digite seu endereço "
@@ -90,6 +90,8 @@
             class="smallReq"
             type="text" 
             required 
+            pattern="[A-Z]"
+            maxlength="2"
             placeholder="Digite sua cidade" />
             /
             <input
@@ -106,10 +108,11 @@
           <td class="answer">
             <input
               required
-              class= "longReq"
+              class= "long"
               type="text"
               placeholder="Digite seu CEP no formato 99999-999"
               maxlength="9"
+              pattern="[0-9]+$"
             />
           </td>
         </tr>
@@ -118,7 +121,7 @@
           <td class="answer">
             <input
               required
-              class= "longReq"
+              class= "long"
               type="tel"
               placeholder="Digite seu telefone no formato (99) 9999-9999"
             />
@@ -130,8 +133,9 @@
           <td class="answer">
             <input
               required
-              class= "longReq"
+              class= "long"
               type="email"
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
               placeholder="Digite seu e-mail"
             />
           </td>
