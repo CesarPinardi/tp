@@ -21,7 +21,6 @@
               type="text"
               placeholder="Digite seu nome"
             />
-            
           </td>
         </tr>
         <tr>
@@ -62,7 +61,13 @@
         <tr>
           <td class="label">Objetivo</td>
           <td class="answer">
-            <textarea  name="Objetivo" cols="62" rows="5"  required> 
+            <textarea
+              name="Objetivo"
+              cols="62"
+              rows="5"
+              required
+              placeholder="Digite seu objetivo"
+            >
             </textarea>
           </td>
         </tr>
@@ -75,7 +80,7 @@
           <td class="label">Endereço</td>
           <td class="answer">
             <input
-            class= "long"
+              class="long"
               required
               type="text"
               placeholder="Digite seu endereço "
@@ -86,19 +91,19 @@
         <tr>
           <td class="label">Cidade / Estado</td>
           <td class="answer">
-            <input 
-            class="smallReq"
-            type="text" 
-            required 
-            pattern="[A-Z]"
-            maxlength="2"
-            placeholder="Digite sua cidade" />
+            <input
+              class="smallReq"
+              type="text"
+              required
+              placeholder="Digite sua cidade"
+            />
             /
             <input
               type="text"
               class="smallReq"
               required
               maxlength="2"
+              pattern="[A-Z]{2}"
               placeholder="Digite seu estado"
             />
           </td>
@@ -108,11 +113,11 @@
           <td class="answer">
             <input
               required
-              class= "long"
+              class="long"
               type="text"
               placeholder="Digite seu CEP no formato 99999-999"
               maxlength="9"
-              pattern="[0-9]+$"
+              pattern="[0-9]{5}[\-][0-9]{3}"
             />
           </td>
         </tr>
@@ -121,9 +126,10 @@
           <td class="answer">
             <input
               required
-              class= "long"
+              class="long"
               type="tel"
               placeholder="Digite seu telefone no formato (99) 9999-9999"
+              pattern="[\(][0-9]{2}[\)][\s][0-9]{4}[\-][0-9]{4}"
             />
           </td>
         </tr>
@@ -133,7 +139,7 @@
           <td class="answer">
             <input
               required
-              class= "long"
+              class="long"
               type="email"
               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
               placeholder="Digite seu e-mail"
@@ -193,7 +199,7 @@
           </td>
         </tr>
       </table>
-      <br>
+      <br />
       <input type="reset" class="button" value="Limpar" />
       |
       <input type="submit" class="button" value="Enviar" />
