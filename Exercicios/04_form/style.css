@@ -26,6 +26,12 @@ h2 {
   width: 450px;
 }
 
+/*
+por algum motivo os icones (check e wrong) estavam bugando,
+por isso, peguei o base64 e utilizei nos inputs,
+espero que funcione!
+*/
+
 input:required:invalid, textarea:required:invalid, textarea:focus:invalid{
   background: #fff
   url('data:image/gif;base64,R0lGODlhFgAWALMAAMwzM/zx8eSSktZcXPHJydppaeutrfXW1s9BQf///913d+67u/jk5OCFhdNOTuegoCH5BAUUAAkALAAAAAAWABYAAARMMMlJq7046827/yBFBKEkAIt4dACgSMfQGlzREgfSNuR2tAMZgOZ5tGYhmytEOA4/Bl2wpWBsFkIHIyAEIDaPAm9iKBRSpbR6zfZEAAA7')
