@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="script.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <form name="form1" action="enviar()">
+      <label for="name"> Nome </label>
+      <input required id="nome" type="text" placeholder="Digite seu nome" />
+      <br />
+      <br />
+
+      <label for="estado"> Estado Civil </label>
+      <input
+        class="long"
+        type="text"
+        id="estadoCivil"
+        list="list_estadoCivil"
+        placeholder="Selecione o Estado Civil"
+      />
+      <datalist id="list_estadoCivil">
+        <option value="Solteiro"></option>
+        <option value="Casado"></option>
+        <option value="Viuvo"></option>
+        <option value="Divorciado"></option>
+      </datalist>
+      <!-- falta colocar a cor em vermelho-->
+      <span id="erro" style="color: red"></span>
+
+      <br />
+      <br />
+
+      <label for="objet"> Objetivo </label>
+      <textarea
+        id="obj"
+        cols="20"
+        rows="2"
+        placeholder="Digite seu objetivo"
+        required
+      ></textarea>
+
+      <br />
+      <br />
+
+      <label for="tel"> Telefone </label>
+      <input id="telefone" type="text" placeholder="Digite seu Telefone" />
+      
+      <br />
+      <br />
+      
+      <label for="tel"> Email </label>
+      <input id="email" type="text" placeholder="Digite seu Email" />
+
+
+
+
+      <br />
+      <br />
+      <input type="button" id="limpar" onclick="limpa()" value="Limpar" />
+      |
+      <input type="button" value="Enviar" onclick="validar()" />
+    </form>
+  </body>
+</html>
