@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type"text/css" href="style.css" />
+    <script src="script1.js"></script>
+    <title>Cadastre seu curriculo.</title>
+  </head>
+  <body>
+    <form name="form1" autocomplete="off" action="enviar" method="POST">
+      <h1>Cadastre seu Currículo</h1>
+      <h2>1. Dados Pessoais</h2>
+
+      <table>
+        <tr>
+          <td class="label">Nome</td>
+          <td class="answer">
+            <input
+              required
+              id = "nome"
+              class="long"
+              type="text"
+              placeholder="Digite seu nome"
+              
+            />
+          </td>
+        </tr>
+        <tr>
+          <td class="label">Data de Nascimento</td>
+          <td class="answer">
+            <input class="long" type="date" />
+          </td>
+        </tr>
+        <tr>
+          <td class="label">Estado Civil</td>
+          <td class="answer">
+            <input
+              id="estadoCivil"
+              class="long"
+              type="text"
+              list="list_estadoCivil"
+              placeholder="Selecione o Estado Civil"
+            />
+            <datalist id="list_estadoCivil">
+              <option value="Solteiro"></option>
+              <option value="Casado"></option>
+              <option value="Viuvo"></option>
+              <option value="Divorciado"></option>
+            </datalist>
+            <span id="erro" style="color: red"></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="label">Sexo</td>
+          <td class="answer">
+            <input type="radio" value="Masculino" /> Masculino
+            <input type="radio" value="Feminino" /> Feminino
+          </td>
+        </tr>
+      </table>
+
+      <h2>2. Objetivo</h2>
+
+      <table>
+        <tr>
+          <td class="label">Objetivo</td>
+          <td class="answer">
+            <textarea
+              id="obj"
+              cols="62"
+              rows="5"
+              placeholder="Digite seu objetivo"
+            >
+            </textarea>
+          </td>
+        </tr>
+      </table>
+
+      <h2>3. Contato</h2>
+
+      <table>
+        <tr>
+          <td class="label">Endereço</td>
+          <td class="answer">
+            <input
+              class="long"
+              required
+              type="text"
+              placeholder="Digite seu endereço "
+            />
+          </td>
+        </tr>
+
+        <tr>
+          <td class="label">Cidade / Estado</td>
+          <td class="answer">
+            <input
+              class="smallReq"
+              type="text"
+              required
+              placeholder="Digite sua cidade"
+            />
+            /
+            <input
+              type="text"
+              class="smallReq"
+              required
+              maxlength="2"
+              pattern="[A-Z]{2}"
+              placeholder="Digite seu estado"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td class="label">CEP</td>
+          <td class="answer">
+            <input
+              required
+              class="long"
+              type="text"
+              placeholder="Digite seu CEP no formato 99999-999"
+              maxlength="9"
+              pattern="[0-9]{5}[\-][0-9]{3}"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td class="label">Telefone</td>
+          <td class="answer">
+            <input
+              required
+              id="telefone"
+              class="long"
+              type="tel"
+              placeholder="Digite seu telefone no formato (99) 9999-9999"
+              pattern="[\(][0-9]{2}[\)][\s][0-9]{4}[\-][0-9]{4}"
+            />
+          </td>
+        </tr>
+
+        <tr>
+          <td class="label">Email</td>
+          <td class="answer">
+            <input
+              required
+              id="email"
+              class="long"
+              type="email"
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+              placeholder="Digite seu e-mail"
+            />
+          </td>
+        </tr>
+
+        <tr>
+          <td class="label">Rede Social</td>
+          <td class="answer">
+            <img src="face.png" />
+            http://facebook.com/
+            <input class="social" type="url" placeholder="Perfil Facebook" />
+            <br />
+            <img src="linkedin.png" />
+            http://linkedin.com/
+            <input class="social" type="url" placeholder="Perfil Linkedin" />
+            <br />
+            <img src="skype.png" />
+            <input class="social" type="url" placeholder="Perfil Skype" />
+          </td>
+        </tr>
+      </table>
+
+      <h2>4. Conhecimentos</h2>
+
+      <table>
+        <tr>
+          <td class="label">Linguagens de Programação</td>
+          <td class="answer">
+            <input type="checkbox" name= "itemCheck" id="checkC" value="c" /> C/C++ <br />
+            <input type="checkbox" name= "itemCheck" id="checkJava" value="java" /> Java <br />
+            <input type="checkbox" name= "itemCheck" id="checkVB" value="vb" /> Visual Basic <br />
+            <input type="checkbox" name= "itemCheck" id="checkNET" value="net" /> .NET <br />
+            <input type="checkbox" name= "itemCheck" id="checkPHP" value="php" /> PHP <br />
+            <input type="checkbox" name= "itemCheck" id="checkPython" value="python" /> Python <br />
+            <input type="checkbox" name= "itemCheck" id="checkHTML" value="html" /> HTML <br />
+          </td>
+        </tr>
+        <tr>
+          <td class="label">Idiomas</td>
+          <td class="answer">
+            Inglês
+            <input type="text" id="eng" list="ingles" placeholder="Nível" />
+            <datalist id="ingles">
+              <option value="Básico"></option>
+              <option value="Intermediário"></option>
+              <option value="Avançado"></option>
+            </datalist>
+            | Espanhol
+            <input type="text" id="esp" list="espanhol" placeholder="Nível" />
+            <datalist id="espanhol">
+              <option value="Básico"></option>
+              <option value="Intermediário"></option>
+              <option value="Avançado"></option>
+            </datalist>
+          </td>
+        </tr>
+      </table>
+      <br />
+
+      <input
+        type="button"
+        id="limpar"
+        onclick="limpa()"
+        class="button"
+        value="Limpar"
+      />
+      |
+      <input type="button" value="Enviar" onclick="validarFormulario()" class="button" />
+    </form>
+  </body>
+</html>

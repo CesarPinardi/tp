@@ -1,0 +1,53 @@
+h1 {
+  color: darkblue;
+  font-family: sans-serif;
+}
+
+h2 {
+  color: blue;
+}
+
+.label {
+  background-color: rgb(133, 175, 253);
+  color: blue;
+  width: 250px;
+}
+
+.answer {
+  background-color: rgb(201, 219, 235);
+  width: 500px;
+}
+
+.social {
+  width: 100px;
+}
+
+.long {
+  width: 450px;
+}
+
+input:required:invalid,
+input:focus:invalid,
+textarea:required:invalid,
+textarea:focus:invalid {
+  background: #fff url("wrong.gif") no-repeat 100% center;
+}
+
+input:required:valid,
+textarea:required:valid {
+  background: #fff url("check.png") no-repeat 100% center;
+}
+
+.button {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: rgb(2, 2, 83);
+  color: white;
+  border: 2px solid darkgray;
+  width: 150px;
+}
+
+tr,
+th,
+td {
+  border: solid 1px;
+}
