@@ -1,3 +1,8 @@
+/*
+os comandos console.log são apenas para controle e
+não fazem diferença no corpo do código 
+*/
+
 function limpa() {
   if (confirm("Deseja realmente limpar?") == true) {
     document.form1.reset();
@@ -13,13 +18,18 @@ function validarFormulario() {
 
   nome = document.form1.nome.value;
 
-  var s_nome = new String(nome); //transforma em string para pegar a propriedade length
+  var s_nome = new String(nome); 
+  //transforma em string para pegar a propriedade length
 
   if (s_nome.length < 4) {
     //caso o nome tenha menos de 3 letras...
     alert("Nome deve ter mais de 3 letras!");
     document.form1.nome.value = "";
     document.form1.nome.focus();
+    /*
+    .focus() foi usado apenas para indicar ao usuário
+    onde o erro ocorreu e se repete ao longo do codigo
+    */
     s_nome = document.form1.nome.value;
   } else {
     //caso nome > 4 letras -> passa para letra maiuscula
@@ -31,12 +41,13 @@ function validarFormulario() {
     estadoCivil = document.form1.estadoCivil.value;
 
     if (estadoCivil == "") {
-      //colocar a tag <span id="erro" style="color: red"></span>
+      //altera a tag <span>
       document.getElementById("erro").innerHTML =
         "Selecione um estado civil válido!";
       document.form1.estadoCivil.focus();
     } else {
-      document.getElementById("erro").innerHTML = ""; //limpa a tag span
+      document.getElementById("erro").innerHTML = ""; 
+      //limpa a tag span
       console.log("Estado civil OK!");
 
       objetivo = document.getElementById("obj").value;
@@ -56,6 +67,7 @@ function validarFormulario() {
         document.form1.telefone.focus();
       } else {
         console.log("Tel/Email OK");
+        //caso um deles nao esteja preenchido...
         if (document.form1.eng.value == "" && document.form1.esp.value == "") {
           alert("Preencha um nível de idioma");
           document.form1.eng.focus();
@@ -69,11 +81,12 @@ function validarFormulario() {
                 console.log(checkBox.length);
               count++;
               if (count == 7) {
-                //nenhum preenchido
+                //7 opcoes -> nenhuma delas preenchida
                 if (confirm("Enviar sem Linguagem de Programção?") == true) {
                   console.log("Sem nenhuma linguagem");
                 } else {
                   console.log("Linguagem selecionada");
+                  return;
                 }
               }
             }
@@ -85,6 +98,7 @@ function validarFormulario() {
 }
 
 function enviar() {
+  //se a funcao nao retornar erro
     if (validarFormulario()) {
       document.form1.submit();
       alert("O cadastro foi concluido!");
