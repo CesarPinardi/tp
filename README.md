@@ -3,4 +3,4 @@
 Feito para a disciplina de Tópicos de Programação.
 </h4>
 
-*@github.com/CesarPinardi*
+*github.com/CesarPinardi*
